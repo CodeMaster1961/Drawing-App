@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     /**
      * @author Ömer Aynaci
      * shows the brush tickness dialog
@@ -31,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         var brushDialog = Dialog(this)
         brushDialog.setContentView(R.layout.dialog_brush_size)
         brushDialog.setTitle("Brush size: ")
-        val smallButton = brushDialog.findViewById<View>(R.id.ib_small_brush)
-        val mediumButton = brushDialog.findViewById<View>(R.id.ib_medium_brush)
-        val largeButton = brushDialog.findViewById<View>(R.id.ib_large_brush)
+        val smallButton: ImageButton = brushDialog.findViewById(R.id.ib_small_brush)
+        val mediumButton: ImageButton = brushDialog.findViewById(R.id.ib_medium_brush)
+        val largeButton: ImageButton = brushDialog.findViewById(R.id.ib_large_brush)
         smallButton.setOnClickListener {
             drawingView?.setSizeForBrush(10.toFloat())
             brushDialog.dismiss()
